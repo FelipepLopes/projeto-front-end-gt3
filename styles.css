@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.logo img {
+    max-width: 100%; /* nunca ultrapassa o tamanho do container */
+    height: auto;    /* mantém a proporção da imagem */
+    display: block;  /* remove espaços em linha indesejados */
+}
+
+
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 10px 40px 10px 15px;
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 10px;
+    color: #555;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #777;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 15px;
+    background-color: #f08080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #f44336;
+}
+
+/* Barra de navegação */
+.nav-bar {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar ul li {
+    margin: 0 20px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Estilos para o Banner */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.banner-text {
+    width: 50%;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.flame {
+    color: #f44336;
+}
+
+.btn-offer {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-offer:hover {
+    background-color: #f08080;
+}
+
+.banner-image {
+    width: 40%;
+}
+
+.banner-image img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: contain;
+}
+
+.featured-collections {
+    padding: 40px 50px;
+}
+
+.featured-collections h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* GRID */
+.collections-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* CARD */
+.collection-card {
+    background-color: #e9f1fb;
+    border-radius: 14px;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER */
+.collection-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* IMAGEM */
+.collection-card img {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+/* TEXTO */
+.card-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO */
+.card-content button {
+    background-color: #fff;
+    color: #c92071;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.collection-card:hover button {
+    background-color: #c92071;
+    color: #fff;
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #e7ff86;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+    .featured-collections {
+        padding: 30px 20px;
+    }
+
+    .collections-grid {
+        flex-direction: column;
+    }
+
+    .collection-card {
+        max-width: 100%;
+    }
+}
